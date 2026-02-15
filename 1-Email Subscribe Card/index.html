@@ -4,9 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Document</title>
+    <title>Email Subscribe</title>
   </head>
   <body>
-    <h1 class="text-blue-100 bg-red-400">Hi my name is Saad!</h1>
+    <div class="flex items-center justify-center h-screen bg-zinc-700">
+      <div class="bg-zinc-800 p-2 mx-6 rounded-2xl">
+        <div class="flex flex-col md:flex-row rounded-l-xl">
+          <img
+            src="images/image.jpg"
+            alt=""
+            class="object-fit rounded-xl h-80 md:h-64 md:rounded-l-xl md:rounded-r-none transform hover:scale-102 duration-300"
+          />
+
+          <div class="p-6 md:p-12">
+            <h2
+              class="font-serif font-medium text-xl text-white text-center md:text-left"
+            >
+              Get diet and fitness tips in your inbox
+            </h2>
+            <p
+              class="max-w-xs my-4 text-xs leading-5 tracking-wide text-center text-white md:text-left"
+            >
+              Eat better and exercise better. Sign up for the Diet&Fitness
+              newsletter.
+            </p>
+            <div
+              class="flex flex-col mt-5 space-y-4 md:space-x-3 md:flex-row md:space-y-0"
+            >
+              <input
+                class="p-2 px-4 w-80 rounded-md text-center md:text-left focus:outline-none border border-zinc-500 text-xs text-white"
+                type="text"
+                placeholder="Enter your email address"
+              />
+              <button
+                class="py-3 px-5 rounded-md bg-lime-500 hover:bg-lime-400 duration-300 text-center text-xs md:text-left text-zinc-800"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
