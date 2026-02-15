@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Projects – Tailwind</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body
+    class="bg-gradient-to-br from-slate-100 to-slate-300 dark:from-slate-900 dark:to-slate-800 min-h-screen transition-all duration-500"
+  >
+    <!-- Dark Mode Toggle Button -->
+    <div class="absolute top-6 right-6">
+      <button
+        id="theme-toggle"
+        class="px-4 py-2 rounded-full bg-slate-800 text-white dark:bg-white dark:text-slate-900 shadow-lg hover:scale-105 transition-all duration-300 ease-in-out"
+      >
+        <span id="toggle-text" class="transition-opacity duration-300">
+          🌙 Dark Mode
+        </span>
+      </button>
+    </div>
+
+    <!-- Header -->
+    <header class="text-center py-16">
+      <h1
+        class="text-4xl md:text-5xl font-bold text-slate-800 dark:text-white mb-4"
+      >
+        🚀 Mini Projects – Tailwind CSS
+      </h1>
+      <p class="text-slate-600 dark:text-slate-300 text-lg">
+        A collection of UI components built to master Tailwind CSS
+      </p>
+    </header>
+
+    <!-- Projects Grid -->
+    <section
+      class="max-w-6xl mx-auto px-6 grid gap-8 md:grid-cols-2 lg:grid-cols-3 pb-16"
+    >
+      <a
+        href="./1-Email Subscribe Card/index.html"
+        class="group bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+      >
+        <h2
+          class="text-xl font-semibold text-slate-800 dark:text-white mb-2 group-hover:text-blue-500 transition"
+        >
+          1️⃣ Email Subscribe Card
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400">
+          Clean subscription UI with modern styling.
+        </p>
+      </a>
+
+      <a
+        href="./2-Pricing Grids/index.html"
+        class="group bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+      >
+        <h2
+          class="text-xl font-semibold text-slate-800 dark:text-white mb-2 group-hover:text-blue-500 transition"
+        >
+          2️⃣ Pricing Grids
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400">
+          Responsive pricing section with plan comparison.
+        </p>
+      </a>
+
+      <a
+        href="./3-Product Modal/index.html"
+        class="group bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+      >
+        <h2
+          class="text-xl font-semibold text-slate-800 dark:text-white mb-2 group-hover:text-blue-500 transition"
+        >
+          3️⃣ Product Modal
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400">
+          Interactive modal layout for product preview.
+        </p>
+      </a>
+
+      <a
+        href="./4-Image Gallery/index.html"
+        class="group bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+      >
+        <h2
+          class="text-xl font-semibold text-slate-800 dark:text-white mb-2 group-hover:text-blue-500 transition"
+        >
+          4️⃣ Image Gallery
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400">
+          Responsive image grid using Tailwind utilities.
+        </p>
+      </a>
+
+      <a
+        href="./5-Login Modal/index.html"
+        class="group bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+      >
+        <h2
+          class="text-xl font-semibold text-slate-800 dark:text-white mb-2 group-hover:text-blue-500 transition"
+        >
+          5️⃣ Login Modal
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400">
+          Modern login form with clean UX design.
+        </p>
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-slate-600 dark:text-slate-400 text-sm">
+      Built with consistency | Tailwind CSS Practice Projects
+    </footer>
+
+    <!-- Dark Mode Script -->
+    <script>
+      const toggleBtn = document.getElementById("theme-toggle");
+
+      toggleBtn.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+
+        if (document.documentElement.classList.contains("dark")) {
+          toggleBtn.textContent = "☀️ Light Mode";
+        } else {
+          toggleBtn.textContent = "🌙 Dark Mode";
+        }
+      });
+    </script>
+  </body>
+</html>
