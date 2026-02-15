@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mini Projects – Tailwind</title>
     <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
   </head>
-
   <body
     class="bg-gradient-to-br from-slate-100 to-slate-300 dark:from-slate-900 dark:to-slate-800 min-h-screen transition-all duration-500"
   >
@@ -117,14 +116,24 @@
     <!-- Dark Mode Script -->
     <script>
       const toggleBtn = document.getElementById("theme-toggle");
+      const toggleText = document.getElementById("toggle-text");
+      const html = document.documentElement;
+
+      // 1. Check for saved theme on page load
+      if (localStorage.getItem("theme") === "dark") {
+        html.classList.add("dark");
+        toggleText.textContent = "☀️ Light Mode";
+      }
 
       toggleBtn.addEventListener("click", () => {
-        document.documentElement.classList.toggle("dark");
+        html.classList.toggle("dark");
 
-        if (document.documentElement.classList.contains("dark")) {
-          toggleBtn.textContent = "☀️ Light Mode";
+        if (html.classList.contains("dark")) {
+          toggleText.textContent = "☀️ Light Mode";
+          localStorage.setItem("theme", "dark"); // 2. Save choice
         } else {
-          toggleBtn.textContent = "🌙 Dark Mode";
+          toggleText.textContent = "🌙 Dark Mode";
+          localStorage.setItem("theme", "light"); // 2. Save choice
         }
       });
     </script>
